@@ -159,6 +159,7 @@
             text-shadow: 0 0 10px var(--neon-green);
             text-align: center;
             line-height: 1.6;
+            z-index: 101;
         }
 
         .credits-title {
@@ -448,10 +449,11 @@
             📱 MOBIL: Joystick + Tűz gomb<br>
             💻 PC: WASD/Nyilak + Egér
         </div>
-        <div class="credits">
-            <span class="credits-title">CREDITS</span><br>
-            István • Ádám • Gergő
-        </div>
+    </div>
+
+    <div class="credits" id="credits">
+        <span class="credits-title">CREDITS</span><br>
+        István • Ádám • Gergő
     </div>
 
     <div id="game-container">
@@ -1348,6 +1350,7 @@
         function startGame() {
             initAudio();
             document.getElementById('start-screen').classList.add('hidden');
+            document.getElementById('credits').style.display = 'none';
             resetGame();
             gameState = 'playing';
 
